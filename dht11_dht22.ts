@@ -84,13 +84,218 @@ namespace dht11_dht22 {
             while (pins.digitalReadPin(dataPin) == 1); //sensor response
 
             //read data (5 bytes)
+            /*
             for (let index = 0; index < 40; index++) {
                 while (pins.digitalReadPin(dataPin) == 1);
                 while (pins.digitalReadPin(dataPin) == 0);
-                control.waitMicros(50)  // microbit v2 -> 50
+                control.waitMicros(50)  // microbit v2 -> 50, microbit v1 -> 28
                 //if sensor still pull up data pin after 28 us it means 1, otherwise 0
                 if (pins.digitalReadPin(dataPin) == 1) dataArray[index] = true
             }
+            */
+            
+            //read data (5 bytes)
+            
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[0] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[1] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[2] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[3] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[4] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[5] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[6] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[7] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[8] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[9] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[10] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[11] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[12] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[13] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[14] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[15] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[16] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[17] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[18] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[19] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[20] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[21] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[22] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[23] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[24] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[25] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[26] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[27] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[28] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[29] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[30] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[31] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[32] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[33] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[34] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[35] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[36] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[37] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[38] = true
+
+            while (pins.digitalReadPin(dataPin) == 1);
+            while (pins.digitalReadPin(dataPin) == 0);
+            control.waitMicros(28)  // microbit v2 -> 50, microbit v1 -> 28
+            if (pins.digitalReadPin(dataPin) == 1) dataArray[39] = true
+
 
             endTime = input.runningTimeMicros()
 
